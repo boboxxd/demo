@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+set(OpenCV_DIR /usr/local/opencv-3.1.0/share/OpenCV)
+project(opencvdemo)
+find_package( OpenCV REQUIRED )
+set(CMAKE_CXX_STANDARD 11)
+set(SOURCE_FILES main.cpp)
+add_executable(opencvdemo ${SOURCE_FILES})
+target_link_libraries( opencvdemo ${OpenCV_LIBS})
